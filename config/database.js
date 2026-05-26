@@ -6,23 +6,18 @@ module.exports = ({ env }) => {
     );
     const databaseSsl = isRailway || env.bool('DATABASE_SSL', true);
 
-    return ({
-    connection: {
-        client: 'postgres',
+    return {
         connection: {
-            connectionString: env('DATABASE_URL'),
-            ssl: databaseSsl && {
-              key: env('DATABASE_SSL_KEY', undefined),
-              cert: env('DATABASE_SSL_CERT', undefined),
-              ca: env('DATABASE_SSL_CA', undefined),
-              capath: env('DATABASE_SSL_CAPATH', undefined),
-              cipher: env('DATABASE_SSL_CIPHER', undefined),
-              rejectUnauthorized: env.bool('DATABASE_SSL_REJECT_UNAUTHORIZED', false),
+            client: 'postgres',
+            connection: {
+                connectionString: env('DATABASE_URL'),
+                ssl: databaseSsl && {
+                    rejectUnauthorized: false,
+                },
+                schema: env('DATABASE_SCHEMA', 'public'),
             },
-            schema: env('DATABASE_SCHEMA', 'public'),
-          },
-        debug: true,
-        pool: { min: 0, max: 7 },
-    }
-    });
+            debug: true,
+            pool: { min: 0, max: 7 },
+        }
+    };
 };
