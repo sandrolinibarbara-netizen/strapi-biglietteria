@@ -1,0 +1,23 @@
+{
+  "kind": "singleType",
+  "collectionName": "servizi_educativis",
+  "info": {
+    "singularName": "servizi-educativi",
+    "pluralName": "servizi-educativis",
+    "displayName": "Servizi educativi"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "titolo": {
+      "type": "string",
+      "required": true
+    },
+    "descrizione": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

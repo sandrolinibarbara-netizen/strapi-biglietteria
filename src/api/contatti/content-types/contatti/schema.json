@@ -1,0 +1,54 @@
+{
+  "kind": "singleType",
+  "collectionName": "contattis",
+  "info": {
+    "singularName": "contatti",
+    "pluralName": "contattis",
+    "displayName": "Contatti"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "uffici_indirizzo": {
+      "type": "string"
+    },
+    "uffici_telefono": {
+      "type": "string"
+    },
+    "uffici_email": {
+      "type": "string"
+    },
+    "didattica_telefono": {
+      "type": "string"
+    },
+    "didattica_email": {
+      "type": "string"
+    },
+    "registrar_telefono": {
+      "type": "string"
+    },
+    "registrar_email": {
+      "type": "string"
+    },
+    "archivi_telefono": {
+      "type": "string"
+    },
+    "archivi_email": {
+      "type": "string"
+    },
+    "segreteria_telefono": {
+      "type": "string"
+    },
+    "segreteria_email": {
+      "type": "string"
+    },
+    "comunicazione_telefono": {
+      "type": "string"
+    },
+    "comunicazione_email": {
+      "type": "string"
+    }
+  }
+}

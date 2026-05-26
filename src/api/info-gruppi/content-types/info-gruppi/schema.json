@@ -1,0 +1,34 @@
+{
+  "kind": "singleType",
+  "collectionName": "info_gruppis",
+  "info": {
+    "singularName": "info-gruppi",
+    "pluralName": "info-gruppis",
+    "displayName": "Info gruppi"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "titolo": {
+      "type": "string",
+      "required": true
+    },
+    "descrizione": {
+      "type": "text",
+      "required": true
+    },
+    "immagine": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  }
+}

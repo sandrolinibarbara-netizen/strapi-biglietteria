@@ -1,0 +1,155 @@
+{
+  "kind": "collectionType",
+  "collectionName": "museums",
+  "info": {
+    "singularName": "museo",
+    "pluralName": "museums",
+    "displayName": "Musei"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "titolo": {
+      "type": "string",
+      "required": true
+    },
+    "sottotitolo": {
+      "type": "string",
+      "required": true
+    },
+    "descrizione_1": {
+      "type": "text",
+      "required": true
+    },
+    "descrizione_2": {
+      "type": "text",
+      "required": true
+    },
+    "immagine": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "intero": {
+      "type": "decimal",
+      "required": true,
+      "default": 0
+    },
+    "ridotto": {
+      "type": "decimal",
+      "required": true,
+      "default": 0
+    },
+    "note": {
+      "type": "text"
+    },
+    "indirizzo": {
+      "type": "string",
+      "required": true
+    },
+    "biglietteria_telefono": {
+      "type": "string",
+      "required": true
+    },
+    "biglietteria_email": {
+      "type": "string",
+      "required": true
+    },
+    "gruppi_email": {
+      "type": "string"
+    },
+    "conservatore_nome": {
+      "type": "string"
+    },
+    "conservatore_telefono": {
+      "type": "string"
+    },
+    "conservatore_email": {
+      "type": "string"
+    },
+    "orari": {
+      "type": "richtext",
+      "required": true
+    },
+    "riduzioni": {
+      "type": "richtext"
+    },
+    "accessibilita": {
+      "type": "richtext"
+    },
+    "gratuita": {
+      "type": "richtext"
+    },
+    "immagine_biglietti_standard": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "immagine_biglietti_gruppi": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "immagine_biglietti_scuole": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "immagine_biglietti_esperienze": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "immagine_biglietto_cumulativo": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "slug": {
+      "type": "string"
+    },
+    "slug_gruppi": {
+      "type": "string"
+    },
+    "slug_scuole": {
+      "type": "string"
+    },
+    "ordine": {
+      "type": "integer",
+      "required": true
+    }
+  }
+}
