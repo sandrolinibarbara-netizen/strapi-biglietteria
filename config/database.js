@@ -1,9 +1,17 @@
-module.exports = ({ env }) => ({
+module.exports = ({ env }) => {
+    const isRailway = Boolean(
+        env('RAILWAY_ENVIRONMENT') ||
+        env('RAILWAY_SERVICE_ID') ||
+        env('RAILWAY_PROJECT_ID')
+    );
+    const databaseSsl = isRailway || env.bool('DATABASE_SSL', true);
+
+    return ({
     connection: {
         client: 'postgres',
         connection: {
             connectionString: env('DATABASE_URL'),
-            ssl: env.bool('DATABASE_SSL', true) && {
+            ssl: databaseSsl && {
               key: env('DATABASE_SSL_KEY', undefined),
               cert: env('DATABASE_SSL_CERT', undefined),
               ca: env('DATABASE_SSL_CA', undefined),
@@ -16,4 +24,5 @@ module.exports = ({ env }) => ({
         debug: true,
         pool: { min: 0, max: 7 },
     }
-});
+    });
+};
