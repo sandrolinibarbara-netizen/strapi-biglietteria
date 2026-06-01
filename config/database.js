@@ -4,7 +4,7 @@ module.exports = ({ env }) => {
         env('RAILWAY_SERVICE_ID') ||
         env('RAILWAY_PROJECT_ID')
     );
-    const databaseSsl = isRailway || env.bool('DATABASE_SSL', false);
+    const databaseSsl = isRailway || env.bool('DATABASE_SSL', true);
 
     return {
         connection: {
