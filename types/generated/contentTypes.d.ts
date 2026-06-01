@@ -586,6 +586,14 @@ export interface ApiInfoGruppiInfoGruppi extends Struct.SingleTypeSchema {
     descrizione: Schema.Attribute.Text & Schema.Attribute.Required;
     immagine: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
       Schema.Attribute.Required;
+    immagine_proposte_educative: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    > &
+      Schema.Attribute.Required;
+    immagine_servizi_educativi: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    > &
+      Schema.Attribute.Required;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -711,6 +719,10 @@ export interface ApiServiziEducativiServiziEducativi
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     descrizione: Schema.Attribute.Text & Schema.Attribute.Required;
+    immagine_proposte_educative: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    > &
+      Schema.Attribute.Required;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',

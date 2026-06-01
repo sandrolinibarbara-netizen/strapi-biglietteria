@@ -18,6 +18,17 @@
     "descrizione": {
       "type": "text",
       "required": true
+    },
+    "immagine_proposte_educative": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
     }
   }
 }
