@@ -58,6 +58,17 @@
     },
     "descrizione_mobile": {
       "type": "text"
+    },
+    "immagine_biglietto_cumulativo": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
     }
   }
 }

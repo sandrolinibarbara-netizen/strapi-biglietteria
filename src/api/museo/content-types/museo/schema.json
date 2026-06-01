@@ -17,7 +17,7 @@
     },
     "sottotitolo": {
       "type": "string",
-      "required": true
+      "required": false
     },
     "descrizione_1": {
       "type": "text",

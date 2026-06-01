@@ -542,6 +542,10 @@ export interface ApiHomepageHomepage extends Struct.SingleTypeSchema {
     descrizione_mobile: Schema.Attribute.Text;
     immagine: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
       Schema.Attribute.Required;
+    immagine_biglietto_cumulativo: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    > &
+      Schema.Attribute.Required;
     immagine_gruppi: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios'
     > &
@@ -655,7 +659,7 @@ export interface ApiMuseoMuseo extends Struct.CollectionTypeSchema {
     slug: Schema.Attribute.String;
     slug_gruppi: Schema.Attribute.String;
     slug_scuole: Schema.Attribute.String;
-    sottotitolo: Schema.Attribute.String & Schema.Attribute.Required;
+    sottotitolo: Schema.Attribute.String;
     titolo: Schema.Attribute.String & Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
